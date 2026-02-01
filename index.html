@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security Awareness Training</title>
+  <style>
+    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; background:#fff7fb; color:#1f2937; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 28px 18px 44px; }
+    .card { background: #fff; border-radius: 18px; padding: 22px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    .tag { display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px; background:#ffe4f1; color:#9d174d; font-weight:600; }
+    h1 { margin: 12px 0 8px; font-size: 26px; }
+    p { line-height: 1.55; margin: 10px 0; }
+    .btn { display:inline-block; border:0; padding:12px 14px; border-radius:12px; font-weight:700; cursor:pointer; background:#ec4899; color:#fff; }
+    .btn:active { transform: translateY(1px); }
+    .muted { color:#6b7280; font-size:13px; }
+    .hidden { display:none; margin-top:12px; padding:12px; background:#fdf2f8; border-radius:12px; border:1px dashed #f9a8d4; }
+    .divider { height:1px; background:#f3f4f6; margin:14px 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <span class="tag">🚨 Security Awareness Training 🚨</span>
+      <h1>Okay… you clicked the link 😌</h1>
+
+      <p>You’re not supposed to be clicking on suspicious things.</p>
+      <p>Consider this your friendly reminder from your personal “security team.” 😉</p>
+
+      <div class="divider"></div>
+
+      <p class="muted">Status: consequences pending…</p>
+
+      <button class="btn" id="revealBtn">View consequences</button>
+
+      <div class="hidden" id="consequence">
+        <p><strong>Consequence:</strong> you clicked a suspicious link 😌 so now i’m bringing you something in person — a little reminder to not click random links again 😉</p>
+        <p class="muted">no spoilers here. lesson delivered face-to-face.</p>
+      </div>
+
+      <p class="muted" style="margin-top:14px;">Tip: If a link says “don’t click”… you probably shouldn’t click 😌</p>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('revealBtn');
+    const box = document.getElementById('consequence');
+    btn.addEventListener('click', () => {
+      box.style.display = "block";
+      btn.textContent = "Alright… now wait 😌";
+      btn.disabled = true;
+      btn.style.opacity = "0.75";
+      btn.style.cursor = "default";
+    });
+  </script>
+</body>
+</html>
